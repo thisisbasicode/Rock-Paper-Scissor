@@ -1,0 +1,67 @@
+from random import randint
+
+choices = ["rock", "paper", "scissor"]
+score = 0
+
+while True:
+    ask = str(input("Rock Paper Scissor? "))
+    compChoice = choices[randint(0,2)]
+    if ask == "rock" and compChoice == "paper":
+        print("The computer chose", compChoice)
+        print("You Lose!")
+        score -= 1
+        print("\nScore:", score)
+        print("To quit, press 'n'. To restart, press 'r'. \n")
+    elif ask == "rock" and compChoice == "scissor":
+        print("The computer chose", compChoice)
+        print("You Win!")
+        score += 1
+        print("\nScore:", score)
+        print("To quit, press 'n'. To restart, press 'r'.\n")
+    elif ask == "rock" and compChoice == "rock":
+        print("The computer chose", compChoice)
+        print("Tie!")
+        print("\nScore:", score)
+        print("To quit, press 'n'. To restart, press 'r'.\n")
+    elif ask == "paper" and compChoice == "paper":
+        print("The computer chose", compChoice)
+        print("Tie!")
+        print("\nScore:", score)
+        print("To quit, press 'n'. To restart, press 'r'.\n")
+    elif ask == "paper" and compChoice == "rock":
+        print("The computer chose", compChoice)
+        print("You Win!")
+        score += 1
+        print("\nScore:", score)
+        print("To quit, press 'n'. To restart, press 'r'.\n")
+    elif ask == "paper" and compChoice == "scissor":
+        print("The computer chose", compChoice)
+        print("You Lose!")
+        score -= 1
+        print("\nScore:", score)
+        print("To quit, press 'n'. To restart, press 'r'.\n")
+    elif ask == "scissor" and compChoice == "scissor":
+        print("The computer chose", compChoice)
+        print("Tie!")
+        print("\nScore:", score)
+        print("To quit, press 'n'. To restart, press 'r'.\n")
+    elif ask == "scissor" and compChoice == "paper":
+        print("The computer chose", compChoice)
+        print("You Win!")
+        score += 1
+        print("\nScore:", score)
+        print("To quit, press 'n'. To restart, press 'r'.\n")
+    elif ask == "scissor" and compChoice == "rock":
+        print("The computer chose", compChoice)
+        print("You Lose!")
+        score -= 1
+        print("\nScore:", score)
+        print("To quit, press 'n'. To restart, press 'r'.\n")
+    elif ask == "n":
+        print("\nYou quit this game.")
+        break
+    elif ask == "r":
+        print("\n Game Restarted \n")
+        score = 0
+    else:
+        print("Error.\n")

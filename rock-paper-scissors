@@ -1,11 +1,14 @@
+# importing randint will allow the compChoice to choose randomly
 from random import randint
 
 choices = ["rock", "paper", "scissor"]
 score = 0
 
+# while true will keep asking the user for the input
 while True:
     ask = str(input("Rock Paper Scissor? "))
     compChoice = choices[randint(0,2)]
+    # the if statements will determine the outcome
     if ask == "rock" and compChoice == "paper":
         print("The computer chose", compChoice)
         print("You Lose!")
